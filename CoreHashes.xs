@@ -10,7 +10,11 @@
 #undef PERL_HASH
 #undef PERL_SEEN_HV_FUNC_H
 #define HAS_QUAD
-#define U64TYPE unsigned __int64
+#ifdef _MSC_VER
+  #define U64TYPE unsigned __int64
+#else
+  #define U64TYPE uint64_t
+#endif
 //_rotl64 is only on 64 bit MS CRTs
 #if defined(_MSC_VER) && !defined(WIN64)
 #  define _rotl64(x,r) (((U64TYPE)x << r) | ((U64TYPE)x >> (64 - r)))

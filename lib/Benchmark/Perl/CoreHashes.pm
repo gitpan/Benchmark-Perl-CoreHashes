@@ -22,7 +22,7 @@ our @EXPORT = qw(
     run_PERL_HASH_FUNC_ONE_AT_A_TIME_OLD
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 require XSLoader;
 XSLoader::load('Benchmark::Perl::CoreHashes', $VERSION);
@@ -31,7 +31,6 @@ XSLoader::load('Benchmark::Perl::CoreHashes', $VERSION);
 
 1;
 __END__
-# Below is stub documentation for your module. You'd better edit it!
 
 =head1 NAME
 
